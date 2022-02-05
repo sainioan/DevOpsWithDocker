@@ -100,3 +100,36 @@ Give me the password: basics
 You found the correct password. Secret message is:
 "This is the secret message"
 ```
+## 1.7 
+
+```Dockerfile
+FROM devopsdockeruh/simple-web-service:alpine
+CMD server
+(base) anniinasainio@Anniinas-MacBook-Air ~ % docker build . -t web-server
+[+] Building 2.9s (6/6) FINISHED                                                                                                                                                                                                              
+ => [internal] load build definition from Dockerfile                                                                                                                                                                                     0.1s
+ => => transferring dockerfile: 165B                                                                                                                                                                                                     0.1s
+ => [internal] load .dockerignore                                                                                                                                                                                                        0.1s
+ => => transferring context: 2B                                                                                                                                                                                                          0.0s
+ => [internal] load metadata for docker.io/devopsdockeruh/simple-web-service:alpine                                                                                                                                                      2.6s
+ => [auth] devopsdockeruh/simple-web-service:pull token for registry-1.docker.io                                                                                                                                                         0.0s
+ => [1/1] FROM docker.io/devopsdockeruh/simple-web-service:alpine@sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543                                                                                                0.0s
+ => => resolve docker.io/devopsdockeruh/simple-web-service:alpine@sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543                                                                                                0.0s
+ => exporting to image                                                                                                                                                                                                                   0.0s
+ => => exporting layers                                                                                                                                                                                                                  0.0s
+ => => writing image sha256:978fbf315695ef5a3ec2e77ee411c4dcd9aa9b867fbc7ea3d26962545fda0585                                                                                                                                             0.0s
+ => => naming to docker.io/library/web-server                                                                                                                                                                                            0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+(base) anniinasainio@Anniinas-MacBook-Air ~ % docker run web-server
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /*path                    --> server.Start.func1 (3 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+
+```
