@@ -107,6 +107,8 @@ Dockerfile:
 
 FROM devopsdockeruh/simple-web-service:alpine
 CMD server
+
+
 (base) anniinasainio@Anniinas-MacBook-Air ~ % docker build . -t web-server
 [+] Building 2.9s (6/6) FINISHED                                                                                                                                                                                                              
  => [internal] load build definition from Dockerfile                                                                                                                                                                                     0.1s
