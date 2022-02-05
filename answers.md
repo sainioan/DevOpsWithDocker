@@ -102,7 +102,9 @@ You found the correct password. Secret message is:
 ```
 ## 1.7 
 
-```Dockerfile
+```
+Dockerfile:
+
 FROM devopsdockeruh/simple-web-service:alpine
 CMD server
 (base) anniinasainio@Anniinas-MacBook-Air ~ % docker build . -t web-server
