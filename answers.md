@@ -137,3 +137,18 @@ WARNING: The requested image's platform (linux/amd64) does not match the detecte
 [GIN-debug] Listening and serving HTTP on :8080
 
 ```
+
+## 1.8 
+
+```
+Dockerfile
+
+FROM  ubuntu:20.04
+RUN apt-get update; apt-get install -y curl;
+CMD echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;
+
+
+docker build . -t curler
+docker run -it curler
+    
+```
