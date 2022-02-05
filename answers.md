@@ -65,4 +65,21 @@ root@04723f1c5812:/# curl helsinki.fi
 REPOSITORY                           TAG        IMAGE ID       CREATED         SIZE
 devopsdockeruh/simple-web-service    ubuntu     4e3362e907d5   10 months ago   83MB
 devopsdockeruh/simple-web-service    alpine     fd312adc88e0   10 months ago   15.7MB
+
+(base) anniinasainio@Anniinas-MacBook-Air ~ % docker ps -a
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS                           PORTS     NAMES
+d285ece45a40   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"    20 seconds ago   Up 19 seconds                              compassionate_benz
+(base) anniinasainio@Anniinas-MacBook-Air ~ % docker exec -it compassionate_benz sh
+/usr/src/app # tail -f ./text.log
+2022-02-05 17:50:19 +0000 UTC
+2022-02-05 17:50:21 +0000 UTC
+2022-02-05 17:50:23 +0000 UTC
+2022-02-05 17:50:25 +0000 UTC
+2022-02-05 17:50:27 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-02-05 17:50:29 +0000 UTC
+2022-02-05 17:50:31 +0000 UTC
+2022-02-05 17:50:33 +0000 UTC
+2022-02-05 17:50:35 +0000 UTC
+2022-02-05 17:50:37 +0000 UTC
 ```
