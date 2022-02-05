@@ -37,10 +37,9 @@ Secret message is: 'You can find the source code here: https://github.com/docker
 ```
 
 ## Exercise 1.4
-
+```
 (base) anniinasainio@Anniinas-MacBook-Air ~ % docker run ubuntu 
 (base) anniinasainio@Anniinas-MacBook-Air ~ % docker ps -a    
-```
 CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS                            PORTS     NAMES
 04723f1c5812   ubuntu                                     "bash"                   27 minutes ago   Up 27 minutes                               nifty_jennings
 (base) anniinasainio@Anniinas-MacBook-Air ~ % docker exec -it nifty_jennings bash
