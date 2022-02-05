@@ -141,8 +141,6 @@ WARNING: The requested image's platform (linux/amd64) does not match the detecte
 ## 1.8 
 ##### Dockerfile
 ```
-
-
 FROM ubuntu:20.04
 RUN apt-get update && apt-get install -y curl
 WORKDIR /app
@@ -150,11 +148,13 @@ COPY script.sh .
 RUN chmod +x /app/script.sh
 CMD /app/script.sh
 ```
+
 ##### script.sh
 ```
 #!/bin/bash
 echo "Input website:";  read website;  echo "Searching..";  sleep 1;  curl http://$website;
 ```
+
 ##### commands
 ```
 docker build . -t curler
