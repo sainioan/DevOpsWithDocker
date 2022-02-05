@@ -58,3 +58,11 @@ root@04723f1c5812:/# curl helsinki.fi
 </body></html>
 ```
 
+## Exercise 1.5
+```
+
+(base) anniinasainio@Anniinas-MacBook-Air ~ % docker images
+REPOSITORY                           TAG        IMAGE ID       CREATED         SIZE
+devopsdockeruh/simple-web-service    ubuntu     4e3362e907d5   10 months ago   83MB
+devopsdockeruh/simple-web-service    alpine     fd312adc88e0   10 months ago   15.7MB
+```
