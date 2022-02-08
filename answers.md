@@ -161,3 +161,10 @@ docker build . -t curler
 docker run -it curler
     
 ```
+## 1.9
+##### commands
+```
+touch logs.txt
+
+docker run -v ${pwd}/logs.txt:/usr/app/logs.txt devopsdockeruh/simple-web-service
+```
