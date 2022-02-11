@@ -166,5 +166,5 @@ docker run -it curler
 ```
 touch logs.txt
 
-docker run -v ${pwd}/logs.txt:/usr/app/logs.txt devopsdockeruh/simple-web-service
+docker run -v ${pwd}/logs.txt:/usr/app/text.log devopsdockeruh/simple-web-service
 ```
