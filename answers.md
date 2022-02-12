@@ -165,6 +165,22 @@ docker run -it curler
 ##### commands
 ```
 touch logs.txt
-
-docker run -v ${pwd}/logs.txt:/usr/app/text.log devopsdockeruh/simple-web-service
+docker run -v "$(pwd)/logs.txt:/usr/src/app/text.log" devopsdockeruh/simple-web-service
 ```
+#### the output
+```
+2022-02-12 05:44:11 +0000 UTC
+2022-02-12 05:44:14 +0000 UTC
+2022-02-12 05:44:16 +0000 UTC
+2022-02-12 05:44:18 +0000 UTC
+2022-02-12 05:44:20 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-02-12 05:44:22 +0000 UTC
+2022-02-12 05:44:24 +0000 UTC
+2022-02-12 05:44:26 +0000 UTC
+2022-02-12 05:44:28 +0000 UTC
+2022-02-12 05:44:30 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+```
+
