@@ -164,8 +164,8 @@ docker run -it curler
 ## 1.9
 ##### commands
 ```
-touch logs.txt
-docker run -v "$(pwd)/logs.txt:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+touch log.txt
+docker run -v $(pwd)/log.txt:/usr/src/app/text.log devopsdockeruh/simple-web-service
 ```
 #### the output
 ```
