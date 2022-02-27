@@ -1,0 +1,32 @@
+(base) anniinasainio@Anniinas-MacBook-Air example-backend % docker build . -t example-backend && docker run -p 8080:8080 example-backend
+[+] Building 2.1s (10/10) FINISHED                                                                                                                                                                                                            
+ => [internal] load build definition from Dockerfile                                                                                                                                                                                     0.1s
+ => => transferring dockerfile: 36B                                                                                                                                                                                                      0.0s
+ => [internal] load .dockerignore                                                                                                                                                                                                        0.1s
+ => => transferring context: 81B                                                                                                                                                                                                         0.0s
+ => [internal] load metadata for docker.io/library/golang:1.16.0-alpine                                                                                                                                                                  1.9s
+ => [auth] library/golang:pull token for registry-1.docker.io                                                                                                                                                                            0.0s
+ => [internal] load build context                                                                                                                                                                                                        0.0s
+ => => transferring context: 499B                                                                                                                                                                                                        0.0s
+ => [1/4] FROM docker.io/library/golang:1.16.0-alpine@sha256:6c4d5e6ea7b6e3f28a2218424b011fcdfddcdd721f9693c9e2d2644c67a4b827                                                                                                            0.0s
+ => CACHED [2/4] WORKDIR /usr/src/app                                                                                                                                                                                                    0.0s
+ => CACHED [3/4] COPY . .                                                                                                                                                                                                                0.0s
+ => CACHED [4/4] RUN go build                                                                                                                                                                                                            0.0s
+ => exporting to image                                                                                                                                                                                                                   0.0s
+ => => exporting layers                                                                                                                                                                                                                  0.0s
+ => => writing image sha256:d1252f5d7a377ab0ed84812b1c773b36e90b421c5143010a27d3ceedf47071cc                                                                                                                                             0.0s
+ => => naming to docker.io/library/example-backend                                                                                                                                                                                       0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+[Ex 2.4+] REDIS_HOST env was not passed so redis connection is not initialized
+[Ex 2.6+] POSTGRES_HOST env was not passed so postgres connection is not initialized
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /ping                     --> server/router.pingpong (4 handlers)
+[GIN-debug] GET    /messages                 --> server/controller.GetMessages (4 handlers)
+[GIN-debug] POST   /messages                 --> server/controller.CreateMessage (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
