@@ -183,4 +183,15 @@ Secret message is: 'You can find the source code here: https://github.com/docker
 Secret message is: 'You can find the source code here: https://github.com/docker-hy'
 
 ```
-
+## 1.10 Ports open
+##### command
+```
+docker run -it -d -p 8080:8080 devopsdockeruh/simple-web-service:alpine sh -c server
+```
+##### output
+```
+{
+"message": "You connected to the following path: /",
+"path": "/"
+}
+```
