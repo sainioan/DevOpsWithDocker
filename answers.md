@@ -199,7 +199,6 @@ docker run -it -d -p 8080:8080 devopsdockeruh/simple-web-service:alpine sh -c se
 
 https://hub.docker.com/repository/docker/anniinasainio/patientor-docker/
 ```
-To run this image
-
-docker build . -t fs-patientor && docker run -p 3000:3000 fs-patientor
+Command 
+docker run -d -p 3000:3000 anniinasainio/patientor-docker
 ```
