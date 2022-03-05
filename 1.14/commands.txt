@@ -1,0 +1,2 @@
+docker build . -t example-backend && docker run -e "ENABLE_CORS=true"  -p 8080:8080 example-backend
+docker build . -t example-frontend && docker run -e "ENABLE_CORS=true"  -p 5000:5000 example-frontend
