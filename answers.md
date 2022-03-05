@@ -211,3 +211,13 @@ docker run -d -p 3000:3000 anniinasainio/patientor-docker
 ##### Heroku Url for the released Application
 
 https://dockerapplication1.herokuapp.com/
+##### commands
+
+```
+docker pull devopsdockeruh/coursepage
+heroku login
+heroku container:login
+docker tag devopsdockeruh/coursepage registry.heroku.com/dockerapplication1/web
+docker push registry.heroku.com/dockerapplication1/web
+heroku container:release web -app dockerapplication1  
+```
