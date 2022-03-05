@@ -206,3 +206,8 @@ https://hub.docker.com/repository/docker/anniinasainio/patientor-docker/
 
 docker run -d -p 3000:3000 anniinasainio/patientor-docker
 ```
+## 1.16
+
+##### Heroku Url for the released Application
+
+https://dockerapplication1.herokuapp.com/
