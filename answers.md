@@ -197,8 +197,12 @@ docker run -it -d -p 8080:8080 devopsdockeruh/simple-web-service:alpine sh -c se
 ```
 ## 1.15 
 
+##### link to dockerhub repository
+
 https://hub.docker.com/repository/docker/anniinasainio/patientor-docker/
+
+##### command
 ```
-Command 
+
 docker run -d -p 3000:3000 anniinasainio/patientor-docker
 ```
