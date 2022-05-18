@@ -195,3 +195,29 @@ docker run -it -d -p 8080:8080 devopsdockeruh/simple-web-service:alpine sh -c se
 "path": "/"
 }
 ```
+## 1.15 
+
+##### link to dockerhub repository
+
+https://hub.docker.com/repository/docker/anniinasainio/patientor-docker/
+
+##### command
+```
+
+docker run -d -p 3000:3000 anniinasainio/patientor-docker
+```
+## 1.16
+
+##### Heroku Url for the released Application
+
+https://dockerapplication1.herokuapp.com/
+##### commands
+
+```
+docker pull devopsdockeruh/coursepage
+heroku login
+heroku container:login
+docker tag devopsdockeruh/coursepage registry.heroku.com/dockerapplication1/web
+docker push registry.heroku.com/dockerapplication1/web
+heroku container:release web -app dockerapplication1  
+```
