@@ -15,6 +15,11 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_PASSWORD: example
+    volumes:
+      - ./database:/var/lib/postgresql/data
+   volumes:
+     database:
+       driver: local
   redis:
     image: redis
     ports:
